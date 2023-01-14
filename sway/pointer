@@ -1,0 +1,8 @@
+input "type:pointer" {
+  accel_profile flat
+  pointer_accel 0.4
+  natural_scroll true
+  scroll_factor 10.0
+  left_handed disabled
+  middle_emulation disabled
+}

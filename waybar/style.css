@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Fira Code Medium", "Delugia Mono light", "JetBrainsMonoMedium Nerd Font Mono", "JetBrains Mono Nerd", FontAwesome, Roboto, Helvetica, Arial, monospace, sans-serif;
+    font-family: "Fira Code Medium", "Delugia PL", "JetBrainsMonoMedium Nerd Font Mono", "JetBrains Mono Nerd", FontAwesome, Roboto, Helvetica, Arial, monospace, sans-serif;
     font-size: 18px;
 }
 
@@ -57,7 +57,7 @@ window#waybar.chromium {
     border-radius: 0px;
     margin: 9px 3px 9px 3px;
     margin-bottom: 0px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     padding: 0 12px 0 12px;
 }
 
@@ -140,8 +140,8 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    /*background-color: #f1c40f;
+    color: #000000;*/
 }
 
 #pulseaudio.muted {
@@ -171,9 +171,9 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#tray {
+/*#tray {
     background-color: #2980b9;
-}
+}*/
 
 #tray > .passive {
     -gtk-icon-effect: dim;

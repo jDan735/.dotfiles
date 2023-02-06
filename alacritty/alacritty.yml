@@ -1,0 +1,22 @@
+font:
+  normal:
+    family: Delugia PL
+    style: Regular
+
+  bold:
+    family: Delugia PL
+    style: Bold
+
+  italic:
+    family: Delugia PL
+    style: Italic
+
+  bold_italic:
+    family: Delugia PL
+    style: Bold Italic
+  size: 14
+window:
+  padding: 
+    x: 20
+    y: 20
+  opacity: 0.9

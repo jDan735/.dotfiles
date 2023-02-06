@@ -16,6 +16,8 @@ status_emoji = ["breaking", "🍅", "⬅️", "created", "💤"][_status["state"
 
 position = 0
 
+_status["task_message"] = "NOT WORKS"
+
 match _status["state"]:
     case 0:
         print("")

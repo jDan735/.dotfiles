@@ -10,7 +10,7 @@ include touchpad
 
 default_border none
 gaps inner 5
-gaps outer 10
+gaps outer 5
 
 ### Variables
 #
@@ -22,17 +22,17 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu rofi -show combi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/jdan/Downloads/wp11058350.png fill
+# output * bg /home/jdan/Downloads/wp11058350.png fill
 #
 # Example configuration:
 #
@@ -209,6 +209,21 @@ bindsym $mod+r mode "resize"
 bar {
     swaybar_command waybar
 }
+
+# capture all screens to clipboard    
+bindsym Shift+Print exec grim - | wl-copy    
+
+# capture the specified screen area to clipboard    
+bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy    
+
+# capture the focused monitor to clipboard    
+bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | s
+
+
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 
 
 include ./config.d/*
